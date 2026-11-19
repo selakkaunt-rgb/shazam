@@ -1,0 +1,6 @@
+pyrofork>=2.3.35,<3
+py-tgcalls>=2.2.0,<3
+yt-dlp[default]
+shazamio>=0.7,<1
+aiohttp>=3.9
+python-dotenv>=1.0
