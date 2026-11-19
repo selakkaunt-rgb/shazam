@@ -76,7 +76,13 @@ from pyrogram.types import (
     Message,
 )
 from pytgcalls import PyTgCalls
-from pytgcalls.exceptions import AlreadyJoinedError, NoActiveGroupCall
+from pytgcalls.exceptions import NoActiveGroupCall
+
+try:
+    from pytgcalls.exceptions import AlreadyJoinedError
+except ImportError:
+    class AlreadyJoinedError(Exception):
+        pass
 from pytgcalls.types import AudioQuality, ChatUpdate, MediaStream, Update
 from pytgcalls.types.stream import StreamEnded
 from shazamio import Shazam
